@@ -13,6 +13,6 @@ jobs:
       - name: Saludar
         run: echo 'Hola desde GitHub Actions'
       - name: Fallo controlado
-        run: exit 1
+        run:
       - name: Mostrar fecha
         run: date
