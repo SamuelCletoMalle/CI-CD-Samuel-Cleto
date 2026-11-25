@@ -11,6 +11,7 @@ function createApp(repository) {
       res.json({ status: 'ready' });
     } catch {
       res.status(503).json({ status: 'unavailable' });
+      console.log('unavailable');
     }
   });
   app.get('/version', (req, res) =>
