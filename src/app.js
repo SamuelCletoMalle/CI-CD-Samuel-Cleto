@@ -40,6 +40,8 @@ function createApp(repository) {
     }
   });
   app.get('/openapi.yaml', (req, res) => res.sendFile('openapi.yaml', { root: process.cwd() }));
+  // Express exige 4 parametros para reconocer un manejador de errores
+  // eslint-disable-next-line no-unused-vars
   app.use((err, req, res, next) =>
     res.status(err.status || 500).json({ error: err.status ? err.message : 'Error interno' }),
   );
