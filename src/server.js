@@ -1,5 +1,5 @@
 const { memoryRepository, postgresRepository } = require('./repositories');
-const { createApp } = require('./app');
+const   { createApp }   =   require("./app")
 async function main() {
   const repo = process.env.DATABASE_URL
     ? postgresRepository(process.env.DATABASE_URL)
